@@ -32,7 +32,7 @@ property_id = '********'
 client = BetaAnalyticsDataClient()
 def get_report(start_date, end_date_delta):
     return client.run_report(RunReportRequest(
-                    property = 'properties/322051858',
+                    property = 'properties/*********',
                     dimensions = [Dimension(name="date"),
                                   Dimension(name="sessionSourceMedium"),
                                   Dimension(name='pagePath'),
@@ -42,7 +42,7 @@ def get_report(start_date, end_date_delta):
                                     end_date= (start_date+end_date_delta).strftime("%Y-%m-%d"))],
                     dimension_filter = FilterExpression(
                         filter = Filter(field_name = "audienceName",
-                                        string_filter = Filter.StringFilter(value = "All Inclusive SSO and Bot Filter"))),
+                                        string_filter = Filter.StringFilter(value = "Audience Name Defined in GA4"))),
                     limit = 100000))
 
 final_data = pd.DataFrame()
