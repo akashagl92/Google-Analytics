@@ -28,11 +28,9 @@ import numpy as np
 #============================================================
 
 SCOPES = ['https://www.googleapis.com/auth/analytics.readonly']
-#KEY_FILE_LOCATION = 'C:\\Users\\client_secrets_services.json'
 KEY_FILE_LOCATION = 'C:\\Users\\ga4-data-analytics-**********.json'
 
 os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = KEY_FILE_LOCATION
-#property_id = 'GA4_property_id'
 property_id = 'xxxxxxxx'
 
 
